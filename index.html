@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Round Me</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <script type="text/javascript" src="codebird.js"></script>
+
+    <div class="jumbotron">
+
+        <h1>ROUND ME</h1>
+
+    </div>
+
+
+    <div id="map"></div>
+
+    <div class="btn-group" style="float: left;">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Address Choice
+        </button>
+
+        <div class="dropdown-menu dropdown-menu-right">
+            <button id="currentLoco" class="dropdown-item" type="button">Current Location</button>
+            <button id="inputAdd" class="dropdown-item" type="button">Input Address</button>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+
+    <form>
+        <div class="form-group">
+          <label for="adress">Address</label>
+          <input class="form-control" id="address">
+        </div>
+        <div class="form-group form-check">
+        </div>
+        <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    
+    <br>
+    <br>
+    
+    <div class="btn-group" style="float: right;">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sort
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+          <button id="recent" class="dropdown-item" type="button">Recent</button>
+          <button id="sortDist" class="dropdown-item" type="button">Distance</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Name</th>
+                <th scope="col">Distance</th>
+                <th scope="col">Tweet</th>
+                <th scope="col">URL</th>
+            </tr>
+        </thead>
+
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCx7yMbCH5ACvx_95q_Rqr_nkx9hbSVppQ&callback=initMap"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="./assets/javascript/app.js"></script>
+</body>
+
+</html>
